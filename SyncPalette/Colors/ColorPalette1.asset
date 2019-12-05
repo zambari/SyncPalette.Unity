@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7f0758340fb8c42b9345c45e5892fa, type: 3}
+  m_Name: ColorPalette1
+  m_EditorClassIdentifier: 
+  _validNames:
+  - BG
+  - Black
+  - White
+  - TextTop
+  - TextDimmer
+  - PanelFill
+  - Accent
+  - Tops
+  - UIBG
+  - Borders
+  - Borders7g00
+  - AccentMedium
+  - AccentDim
+  - hierarhy|Item
+  - hierarchyBg
+  - ItemSelectionBG
+  - TextUtens
+  - HeaderBG
+  - Bordersn
+  - Unicodes
+  - BordersTopBottom
+  - SubPanelBg
+  - ConstrastAccent
+  otherPal: {fileID: 0}
+  copy: 1
+  values:
+  - name: BG
+    value: {r: 0, g: 0, b: 0, a: 1}
+  - name: Black
+    value: {r: 0, g: 0, b: 0, a: 1}
+  - name: White
+    value: {r: 1, g: 1, b: 1, a: 1}
+  - name: TextTop
+    value: {r: 0.772, g: 0.86126727, b: 0.86126727, a: 0.884}
+  - name: TextDimmer
+    value: {r: 0.9264706, g: 0.9264706, b: 0.9264706, a: 0.372}
+  - name: PanelFill
+    value: {r: 0.6, g: 0.6, b: 0.6, a: 0.091}
+  - name: Accent
+    value: {r: 0, g: 1, b: 0.59607846, a: 0.8}
+  - name: Tops
+    value: {r: 0.29195502, g: 0.56994987, b: 0.66176474, a: 0.447}
+  - name: UIBG
+    value: {r: 0, g: 0, b: 0, a: 0.785}
+  - name: Borders
+    value: {r: 0.1694961, g: 0.43583712, b: 0.6985294, a: 0.303}
+  - name: Borders7g00
+    value: {r: 0.6606834, g: 0.6738487, b: 0.6911765, a: 0.497}
+  - name: AccentMedium
+    value: {r: 0, g: 1, b: 0.59607846, a: 0.366}
+  - name: AccentDim
+    value: {r: 0.018328305, g: 0.69639057, b: 0.8308824, a: 0.334}
+  - name: hierarhy|Item
+    value: {r: 0.77205884, g: 0.65852076, b: 0.65852076, a: 1}
+  - name: hierarchyBg
+    value: {r: 0, g: 0.5638944, b: 0.58823526, a: 0.184}
+  - name: ItemSelectionBG
+    value: {r: 0, g: 0.64705884, b: 0.19188641, a: 0.428}
+  - name: TextUtens
+    value: {r: 1, g: 1, b: 1, a: 0.834}
+  - name: HeaderBG
+    value: {r: 0.19269031, g: 0.9705882, b: 0.74526584, a: 0.309}
+  - name: Bordersn
+    value: {r: 1, g: 0.051470578, b: 0.051470578, a: 0.884}
+  - name: Unicodes
+    value: {r: 1, g: 1, b: 1, a: 0.422}
+  - name: BordersTopBottom
+    value: {r: 0, g: 0.5019608, b: 1, a: 0.191}
+  - name: SubPanelBg
+    value: {r: 0, g: 0, b: 0, a: 0.778}
+  - name: ConstrastAccent
+    value: {r: 0.3602941, g: 0, b: 0, a: 0.878}

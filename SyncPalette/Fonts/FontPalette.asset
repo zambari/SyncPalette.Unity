@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32604756bc203df4ca95d2ce91b8191e, type: 3}
+  m_Name: FontPalette
+  m_EditorClassIdentifier: 
+  _validNames:
+  - Arial
+  - AsapMedium
+  - AsapRegular
+  - Asap-Regular
+  - Asap-Medium
+  otherPal: {fileID: 0}
+  copy: 0
+  values:
+  - name: Arial
+    value: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  - name: AsapMedium
+    value: {fileID: 12800000, guid: c5e18d91911832f46991aeadb435f65b, type: 3}
+  - name: AsapRegular
+    value: {fileID: 12800000, guid: f7c6c16f322c84946a491d03ca3251be, type: 3}
+  - name: Asap-Regular
+    value: {fileID: 12800000, guid: f7c6c16f322c84946a491d03ca3251be, type: 3}
+  - name: Asap-Medium
+    value: {fileID: 12800000, guid: c5e18d91911832f46991aeadb435f65b, type: 3}

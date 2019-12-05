@@ -1,0 +1,27 @@
+#============== 
+#v 1.06d // slns removed coz dotnet
+#===============
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/@BLD/
+**/BLD/
+**/nie/
+#=====================================
+#Visual Studio / MonoDevelop generated
+#=====================================# Visual Studio 2015 cache directory
+**/.vs/
+**/.vscode/
+ExportedObj/
+obj/
+*.apk
+*.svd
+*.apk
+*.unityproj
+*.sln
+*.csproj
+*.booproj
+
+zambox.Unity/Assets/StreamingAssets/TestSequnecerData/

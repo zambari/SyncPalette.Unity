@@ -21,12 +21,20 @@ namespace Z
         ScriptableObject scriptableObject { get; }
         System.Type GetNamedType();
     }
-
+    public interface IPaletteUpdater
+    {
+        void UpdatePalette();
+        GameObject gameObject { get; }
+        string name { get; }
+    }
     public interface IPaletteProvider
     {
         bool IsOfType(System.Type p);
-        IPalette palette {get;}
-        System.Action onPaletteChange {get;set;}
+        IPalette palette { get; }
+        void RegisterListener(IPaletteUpdater source);
+        void UnRegisterListener(IPaletteUpdater source);
+        //        System.Action onPaletteChange {get;set;}
+        //System.Action onPaletteChange {get;set;}
         GameObject gameObject { get; }
         string name { get; }
     }

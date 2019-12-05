@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Z
 {
-
+    [ExecuteInEditMode]
     public abstract class ProviderBase<TypePal, TNamed, TypeVal> : ProviderRoot, INamedSelectionProvider, IPaletteProvider
     where TNamed : NamedValue<TypeVal>, new()
     where TypePal : PaletteBase<TNamed, TypeVal>
     {
-        public System.Action onPaletteChange { get; set; }
         [SerializeField] [HideInInspector] TypePal lastPalette;
         [SerializeField] TypePal _palette;
+        protected List<IPaletteUpdater> listeners;
 
         public bool IsOfType(System.Type T)
         {
@@ -25,7 +25,7 @@ namespace Z
             set
             {
                 _palette = value as TypePal;
-                SentPaletteUpdates();
+                SendPaletteUpdates();
             }
         }
         void OnDisable()
@@ -66,17 +66,15 @@ namespace Z
             _palette = FindDefaultTemplate();
 
         }
-        void SentPaletteUpdates()
+        void SendPaletteUpdates()
         {
-                if (onPaletteChange != null)
-                {
-                    onPaletteChange.Invoke();
-                }
-                else
-                {
-//                      Debug.Log("no listnere");
-                }
             lastPalette = _palette;
+            for (int i = 0; i < listeners.Count; i++)
+                listeners[i].UpdatePalette();
+            if (listeners.Count == 0)
+            {
+                Debug.Log(" we have no listeners!!");
+            }
         }
         protected virtual void OnValidate()
         {
@@ -85,9 +83,35 @@ namespace Z
             if (palette != lastPalette)
             {
                 Debug.Log("palette change detected");
-                SentPaletteUpdates();
+                SendPaletteUpdates();
             }
-            palette = _palette;
+            //  palette = _palette;
+        }
+        public void RegisterListener(IPaletteUpdater source)
+        {
+            if (listeners == null) listeners = new List<IPaletteUpdater>();
+            if (listeners.Contains(source))
+            {
+                Debug.Log(Time.frameCount + " we already have ths soruce", source.gameObject);
+            }
+            else
+            {
+
+                // Debug.Log(Time.frameCount + " adding " + source.name,source.gameObject);
+                listeners.Add(source);
+            }
+        }
+
+        public void UnRegisterListener(IPaletteUpdater source)
+        {
+            //Debug.Log(Time.frameCount+" unregregistering listener "+source.name,source.gameObject);
+            //onPaletteChange-=source.UpdatePalette;
+            if (listeners == null) listeners = new List<IPaletteUpdater>();
+            if (!listeners.Contains(source))
+            {
+                Debug.Log("list does not contain this object "+source.name, source.gameObject);
+            }
+            listeners.Remove(source);
         }
     }
 

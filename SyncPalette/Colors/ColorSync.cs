@@ -19,10 +19,13 @@ public class ColorSync : SyncBase<ColorPalette, NamedColor, Color>
 
     public override void UpdateValue()
     {
-        if (nameSelection == null || string.IsNullOrEmpty(nameSelection.value)) return;
+        if (nameSelection == null || string.IsNullOrEmpty(nameSelection.value))
+        {
+            return;
+        }
         if (Palette != null)
         {
-            Color c = Palette.GetValue( nameSelection.value);
+            Color c = Palette.GetValue(nameSelection.value);
             if (c != default(Color))
             {
                 if (image != null)
@@ -32,9 +35,9 @@ public class ColorSync : SyncBase<ColorPalette, NamedColor, Color>
                 if (text != null)
                 {
                     text.color = c;
-                } 
+                }
             }
-            // else Debug.Log("invalid name here?",gameObject);
+            else Debug.Log("invalid name here?", gameObject);
         }
         else Debug.Log("no color Palette in parent ", gameObject);
 

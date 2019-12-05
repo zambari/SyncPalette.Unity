@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using zUI;
+// using zUI;
 namespace Z
 {
     /*
@@ -46,23 +46,23 @@ ThingPalette->ThingSync: Sends an event when data changes
                 //    t.gameObject.AddOrGetComponent<FontSizeSync>().presetName = "PanelTop";
                 }
             }
-            var borders = gameObject.GetComponentsInChildren<LayoutBorderDragger>();
-            foreach (var b in borders)
-            {
-                var bordersync = b.AddOrGetComponent<ColorSync>();
-                bordersync.presetName = "Border";
-            }
-            var tops = gameObject.GetComponentsInChildren<LayoutTopControl>();
-            foreach (var t in tops)
-            {
-                var bordersync = t.AddOrGetComponent<ColorSync>();
-                bordersync.presetName = "PanelTop";
-            }
-            var pans = gameObject.GetComponentsInChildren<LayoutPanel>();
-            foreach (var t in pans)
-            {
-                t.AddOrGetComponent<ColorSync>().presetName = "PanelBody";
-            }
+            // var borders = gameObject.GetComponentsInChildren<LayoutBorderDragger>();
+            // foreach (var b in borders)
+            // {
+            //     var bordersync = b.AddOrGetComponent<ColorSync>();
+            //     bordersync.presetName = "Border";
+            // }
+            // var tops = gameObject.GetComponentsInChildren<LayoutTopControl>();
+            // foreach (var t in tops)
+            // {
+            //     var bordersync = t.AddOrGetComponent<ColorSync>();
+            //     bordersync.presetName = "PanelTop";
+            // }
+            // var pans = gameObject.GetComponentsInChildren<LayoutPanel>();
+            // foreach (var t in pans)
+            // {
+            //     t.AddOrGetComponent<ColorSync>().presetName = "PanelBody";
+            // }
         }
     }
 }

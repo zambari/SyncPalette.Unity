@@ -11,11 +11,11 @@ namespace Z
 
     //IGetCurrentValue
     [ExecuteInEditMode]
-    public abstract class SyncBase<TPalette, TNamed, TValue> : MonoBehaviour, IValueSync, IAddCurrentValue
+    public abstract class SyncBase<TPalette, TNamed, TValue> : MonoBehaviour, IValueSync, IAddCurrentValue, IPaletteUpdater
     where TNamed : NamedValue<TValue>, new()
      where TPalette : PaletteBase<TNamed, TValue>
     {
-        public NameSelectionDrawer nameSelection;
+        public NameSelectionDrawer nameSelection = new NameSelectionDrawer();
         IPaletteProvider myProvider
         {
             get
@@ -27,15 +27,15 @@ namespace Z
             }
         }
         IPaletteProvider _myProvider;
-
-        TPalette _palette;
-
         public TPalette Palette
         {
             get
             {
                 if (myProvider != null)
+                {
+                    // Debug.Log(name+ " name "+myProvider.name);
                     return myProvider.palette as TPalette;
+                }
                 return null;
             }
         }
@@ -70,7 +70,12 @@ namespace Z
         {
             return typeof(TPalette);
         }
-        public virtual void UpdateValue() { }
+        public virtual void UpdateValue()
+        {
+
+            throw new System.NotImplementedException("Please override updatevalue");
+
+        }
 
         public void UpdateValueIfEnabled()
         {
@@ -90,15 +95,12 @@ namespace Z
         }
         protected virtual void Start()
         {
-            //
-            myProvider.onPaletteChange -= UpdatePalette;
-            myProvider.onPaletteChange += UpdatePalette;
+
+            myProvider.RegisterListener(this);
+         
         }
         public void UpdatePalette()
         {
-            //  if (_palette != null) _palette.onValueChanged -= UpdateValue;
-
-            //            else Debug.Log("i dont have provider");
             if (Palette != null)
             {
                 Palette.onValueChanged -= UpdateValue;
@@ -135,56 +137,33 @@ namespace Z
             return default(TValue);
         }
 
-        // public virtual TNamed GetCurrentValue1<TNamed>()
-        // {
-        //     Debug.Log("caled get value !!! yay");
-        //     return default(TNamed);
-        // }
-
+       
 
         protected virtual void OnEnable()
         {
+            if (Time.frameCount == 0) return;
             if (myProvider != null)
             {
-                myProvider.onPaletteChange -= UpdatePalette;
-                myProvider.onPaletteChange += UpdatePalette;
+                myProvider.RegisterListener(this);
                 UpdatePalette();
             }
-            //         myProvider.onPaletteChange += UpdatePalette;
-            // if (Palette != null)
-            // {
-            //     Palette.onValueChanged -= UpdateValue;
-            //     Palette.onValueChanged += UpdateValue;
-
-            // }
-            // if (myProvider != null)
-            // {
-            //     myProvider.onPaletteChange -= UpdatePalette;
-            //     myProvider.onPaletteChange += UpdatePalette;
-            // }
-            //    UpdateValue();
-        }
-
-        protected virtual void OnValidate()
-        {
-            if (!isActiveAndEnabled) return;
-
-            if (Palette != null)
+            else
             {
-                Palette.onValueChanged -= UpdateValue;
-                Palette.onValueChanged += UpdateValue;
+                Debug.Log(name + " found no value provider");
             }
             UpdateValue();
+       
         }
 
         protected virtual void OnDisable()
         {
+            if (Time.frameCount == 0) return;
             if (Palette != null)
             {
                 Palette.onValueChanged -= UpdateValue;
             }
             if (myProvider != null)
-                myProvider.onPaletteChange -= UpdatePalette;
+                myProvider.UnRegisterListener(this);
         }
     }
 

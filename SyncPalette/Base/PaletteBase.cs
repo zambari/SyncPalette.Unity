@@ -31,7 +31,7 @@ namespace Z
             if (onValueChanged != null) onValueChanged();
             else
             {
-                //            Debug.Log("no listenerrs " + name);
+                       Debug.Log("no listenerrs " + name);
             }
             SetAsDirty();
         }

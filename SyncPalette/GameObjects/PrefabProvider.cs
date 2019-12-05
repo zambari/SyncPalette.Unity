@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Z;
-using zUI;
+// using zUI;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -45,11 +45,11 @@ public class PrefabProvider : ProviderBase<PrefabPalette, NamedGameObject, GameO
         if (instnace != null) return instnace;
         return ProviderRoot.FindProvider(typeof(NamedGameObject)) as PrefabProvider;
     }
-    public LayoutPanel GetPanelWithScrollRect(Transform parent, string label)
-    {
-        var o = GetGameObject(parent, "PanelWithScrollRect", label);
-        return o.GetComponentInChildren<LayoutPanel>();
-    }
+    // public LayoutPanel GetPanelWithScrollRect(Transform parent, string label)
+    // {
+    //     var o = GetGameObject(parent, "PanelWithScrollRect", label);
+    //     return o.GetComponentInChildren<LayoutPanel>();
+    // }
     public Toggle GetToggle(Transform parent, string label)
     {
         var o = GetGameObject(parent, "Toggle", label);
@@ -80,16 +80,16 @@ public class PrefabProvider : ProviderBase<PrefabPalette, NamedGameObject, GameO
         }
         return o;
     }
-    public LayoutPanel GetPanel(Transform parent, string label)
-    {
-        var o = GetGameObject(parent, "Panel", label);
-        return o.GetComponentInChildren<LayoutPanel>();
-    }
-    public LayoutFoldController GetSubPanel(Transform parent, string label)
-    {
-        var o = GetGameObject(parent, "SubPanel", label);
-        return o.GetComponentInChildren<LayoutFoldController>();
-    }
+    // public LayoutPanel GetPanel(Transform parent, string label)
+    // {
+    //     var o = GetGameObject(parent, "Panel", label);
+    //     return o.GetComponentInChildren<LayoutPanel>();
+    // }
+    // public LayoutFoldController GetSubPanel(Transform parent, string label)
+    // {
+    //     var o = GetGameObject(parent, "SubPanel", label);
+    //     return o.GetComponentInChildren<LayoutFoldController>();
+    // }
     public GameObject GetInstance(string s, Transform parent)
     {
         if (palette == null) return null;

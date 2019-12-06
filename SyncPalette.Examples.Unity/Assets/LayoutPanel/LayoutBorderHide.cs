@@ -104,7 +104,7 @@ namespace zUI
         void OnValidate()
         {
             borderHideMode = _borderHideMode;
-            borderHideMode = BorderHideMode.Visible;
+            // borderHideMode = BorderHideMode.Visible;
             if (editColors)
             {
                 if (applyToAllChildren)

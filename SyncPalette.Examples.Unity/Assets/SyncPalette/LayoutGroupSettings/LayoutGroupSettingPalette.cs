@@ -8,7 +8,7 @@ using UnityEditor;
 namespace Z
 {
 
-    [CreateAssetMenu(menuName = "Palettes/LayoutGroupSettingPalette", fileName = "LayoutGroupSettingPalette")]
+    [CreateAssetMenu(menuName = "Palettes/LayoutGroupSettingsPalette", fileName = "LayoutGroupSettingsPalette")]
     public class LayoutGroupSettingsPalette : PaletteBase<NamedLayoutGroupSettings, LayoutGroupSettings>
     {
         public NamedLayoutGroupSettings[] values;

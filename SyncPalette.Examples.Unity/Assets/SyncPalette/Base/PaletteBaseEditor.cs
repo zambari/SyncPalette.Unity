@@ -11,7 +11,7 @@ namespace Z
     public class PaletteEditor<T> : Editor
     {
         protected SerializedProperty values;
-        static readonly int butWidth = 18;
+        protected static readonly int butWidth = 18;
 
         protected IPalette palette;
         protected string editedName;

@@ -8,10 +8,9 @@ using Z;
 public class StyleDefinition
 {
     public string name;
-    public ColorPalette colorPalette;
 
     public FontPalette fontPalette;
     public FontSizePalette fontSizePalette;
     public LayoutSettingsPalette layoutSettingsPalette;
-
+    public LayoutGroupSettingsPalette layoutGroupSettingsPalette;
 }

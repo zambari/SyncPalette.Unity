@@ -69,11 +69,19 @@ namespace Z
         void SendPaletteUpdates()
         {
             lastPalette = _palette;
+            if (listeners == null)
+            {
+                Debug.Log("lisneres list does not exist"); return;
+            }
             for (int i = 0; i < listeners.Count; i++)
                 listeners[i].UpdatePalette();
             if (listeners.Count == 0)
             {
                 Debug.Log(" we have no listeners!!");
+            }
+            else
+            {
+                // Debug.Log("sent update to " + listeners.Count + " listenrers");
             }
         }
         protected virtual void OnValidate()
@@ -92,7 +100,7 @@ namespace Z
             if (listeners == null) listeners = new List<IPaletteUpdater>();
             if (listeners.Contains(source))
             {
-                Debug.Log(Time.frameCount + " we already have ths soruce", source.gameObject);
+                // Debug.Log(Time.frameCount + " we already have ths soruce", source.gameObject);
             }
             else
             {
@@ -109,7 +117,7 @@ namespace Z
             if (listeners == null) listeners = new List<IPaletteUpdater>();
             if (!listeners.Contains(source))
             {
-                Debug.Log("list does not contain this object "+source.name, source.gameObject);
+                Debug.Log("list does not contain this object " + source.name, source.gameObject);
             }
             listeners.Remove(source);
         }

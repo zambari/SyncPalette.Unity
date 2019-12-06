@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7f0758340fb8c42b9345c45e5892fa, type: 3}
+  m_Name: TermColorPalette
+  m_EditorClassIdentifier: 
+  _validNames:
+  - BG
+  - Black
+  - White
+  - Text
+  - TextTop
+  - PanelFill
+  - Accent
+  - AccentDim
+  - MenuLabel
+  - MenuItemLabel
+  - StatusLED
+  - Header
+  - SmallCaption
+  - TerminalMain
+  - WindowBG
+  - Border
+  otherPal: {fileID: 0}
+  copy: 0
+  values:
+  - name: BG
+    value: {r: 0, g: 0, b: 0, a: 1}
+  - name: Black
+    value: {r: 0, g: 0, b: 0, a: 1}
+  - name: White
+    value: {r: 1, g: 1, b: 1, a: 1}
+  - name: Text
+    value: {r: 1, g: 1, b: 1, a: 1}
+  - name: TextTop
+    value: {r: 1, g: 1, b: 1, a: 1}
+  - name: PanelFill
+    value: {r: 0.6, g: 0.6, b: 0.6, a: 0.2}
+  - name: Accent
+    value: {r: 0.13725491, g: 0.37254903, b: 0.38431376, a: 0.8}
+  - name: AccentDim
+    value: {r: 0.2, g: 0.8, b: 0.7, a: 0.3}
+  - name: MenuLabel
+    value: {r: 0, g: 0, b: 0, a: 0}
+  - name: MenuItemLabel
+    value: {r: 1, g: 1, b: 1, a: 1}
+  - name: StatusLED
+    value: {r: 0.28235295, g: 1, b: 0, a: 1}
+  - name: Header
+    value: {r: 0.7137255, g: 0.121568635, b: 0.121568635, a: 0.547}
+  - name: SmallCaption
+    value: {r: 1, g: 1, b: 1, a: 0.303}
+  - name: TerminalMain
+    value: {r: 1, g: 1, b: 1, a: 1}
+  - name: WindowBG
+    value: {r: 0, g: 0, b: 0, a: 0}
+  - name: Border
+    value: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}

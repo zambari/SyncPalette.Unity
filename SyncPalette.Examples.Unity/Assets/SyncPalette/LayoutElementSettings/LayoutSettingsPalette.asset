@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ea48bf7005bf74cbcb0748f1e9b450, type: 3}
+  m_Name: LayoutSettingsPalette
+  m_EditorClassIdentifier: 
+  _validNames:
+  - z2qd
+  - Narrow Item
+  - 9/16/2019 10:38:18 PM
+  - SliderItem
+  - Sceny
+  - 20.09.2019 04:57:27
+  - 23.09.2019 00:30:56
+  values:
+  - name: z2qd
+    value:
+      ignoreLayout: 0
+      minHeight: 20
+      minWidth: 20
+      preferredWidth: 30
+      preferredHeight: 20
+      flexibleWidth: 0.1
+      flexibleHeight: 0.1
+  - name: Narrow Item
+    value:
+      ignoreLayout: 0
+      minHeight: -1
+      minWidth: -1
+      preferredWidth: -1
+      preferredHeight: 24
+      flexibleWidth: 1
+      flexibleHeight: -1
+  - name: 9/16/2019 10:38:18 PM
+    value:
+      ignoreLayout: 0
+      minHeight: -1
+      minWidth: -1
+      preferredWidth: -1
+      preferredHeight: 22.25
+      flexibleWidth: 1
+      flexibleHeight: -1
+  - name: SliderItem
+    value:
+      ignoreLayout: 0
+      minHeight: -1
+      minWidth: -1
+      preferredWidth: -1
+      preferredHeight: 22
+      flexibleWidth: 1
+      flexibleHeight: -1
+  - name: Sceny
+    value:
+      ignoreLayout: 0
+      minHeight: -1
+      minWidth: -1
+      preferredWidth: -1
+      preferredHeight: 13.41
+      flexibleWidth: 1
+      flexibleHeight: -1
+  - name: 20.09.2019 04:57:27
+    value:
+      ignoreLayout: 0
+      minHeight: -1
+      minWidth: -1
+      preferredWidth: -1
+      preferredHeight: 15.74
+      flexibleWidth: 1
+      flexibleHeight: -1
+  - name: 23.09.2019 00:30:56
+    value:
+      ignoreLayout: 0
+      minHeight: -1
+      minWidth: -1
+      preferredWidth: -1
+      preferredHeight: 22
+      flexibleWidth: 1
+      flexibleHeight: -1

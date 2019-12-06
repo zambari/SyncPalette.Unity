@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ea48bf7005bf74cbcb0748f1e9b450, type: 3}
+  m_Name: TermLayout2a
+  m_EditorClassIdentifier: 
+  _validNames:
+  - HeaderTop
+  - MenuItem
+  - TopMenuItem
+  values:
+  - name: HeaderTop
+    value:
+      ignoreLayout: 0
+      minHeight: 25
+      minWidth: 50
+      preferredWidth: 50
+      preferredHeight: 25
+      flexibleWidth: 0.1
+      flexibleHeight: 0
+  - name: MenuItem
+    value:
+      ignoreLayout: 0
+      minHeight: 20
+      minWidth: 20
+      preferredWidth: 105
+      preferredHeight: 35
+      flexibleWidth: 0.1
+      flexibleHeight: 0
+  - name: TopMenuItem
+    value:
+      ignoreLayout: 0
+      minHeight: 0
+      minWidth: 20
+      preferredWidth: 105
+      preferredHeight: 10
+      flexibleWidth: 0.1
+      flexibleHeight: 0.1

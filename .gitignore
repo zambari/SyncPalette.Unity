@@ -25,3 +25,7 @@ obj/
 *.booproj
 
 zambox.Unity/Assets/StreamingAssets/TestSequnecerData/
+
+ExampleProject/ProjectSettings/
+
+ExampleProject/UnityPackageManager/

@@ -26,6 +26,12 @@ obj/
 
 zambox.Unity/Assets/StreamingAssets/TestSequnecerData/
 
+<<<<<<< HEAD
 ExampleProject/ProjectSettings/
 
 ExampleProject/UnityPackageManager/
+=======
+SyncPalette.Examples.Unity/ProjectSettings/
+
+SyncPalette.Examples.Unity/UnityPackageManager/
+>>>>>>> alpha

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: LayoutGroupSettingPalette1
+  m_EditorClassIdentifier: Assembly-CSharp:Z:LayoutGroupSettingsPalette
+  _validNames:
+  - VerticalMenu
+  - HorizontalMenu
+  values:
+  - name: VerticalMenu
+    value:
+      padding:
+        m_Left: 1
+        m_Right: 1
+        m_Top: 1
+        m_Bottom: 1
+      spacing: 5
+  - name: HorizontalMenu
+    value:
+      padding:
+        m_Left: 2
+        m_Right: 2
+        m_Top: 2
+        m_Bottom: 2
+      spacing: 10

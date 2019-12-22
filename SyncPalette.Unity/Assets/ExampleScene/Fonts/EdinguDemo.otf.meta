@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e989b4778ab74b045addfe54375c58b1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Edingu
+  fontNames:
+  - Edingu
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0468fc6528962834eaa5ca21e0e8aeeb, type: 3}
+  - {fileID: 12800000, guid: b08c86d62e9453f4fb23f97378e2fb94, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
